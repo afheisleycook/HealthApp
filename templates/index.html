@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/app.css">
+    <script src="/static/js/app.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    my journal
+</header>
+<nav>
+    <ul>
+        <li>
+            <a href="{{url_for('Main')}}">home</a>
+        </li>
+    </ul>
+</nav>
+<main>
+
+    {% block code %}
+    <div class="posts">
+        {% for post in posts %}
+        {{post}}
+        {% endfor %}
+    </div>
+    {% endblock %}
+    <form onsubmit="/post" method="post">
+        <label for="subject">
+            <input id="subject" name="subject" type="text">
+        </label>
+        <br>
+        <label for="description">
+            <input type="text" name="">
+        </label>
+        <br>
+        <label for="level">
+            <input type="number">
+        </label>
+        <input type="button" value="post">
+    </form>
+
+</main>
+
+<footer>
+    health v.1
+</footer>
+
+</body>
+</html>

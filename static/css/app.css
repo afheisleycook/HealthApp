@@ -1,0 +1,13 @@
+header {
+    background: sandybrown;
+}
+body{
+    background: beige;
+
+}
+footer {
+    background: sandybrown;
+    font-size: small;
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    color:red;
+}
