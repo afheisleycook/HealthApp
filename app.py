@@ -6,7 +6,7 @@ from sqlite3 import  connect
 db = connect("app.db")
 
 app = Flask(__name__)
-@app.route("/",methods=["get","post"])
+@app.route("/",methods=["get"])
 def Main():
     if request.method == 'GET':
         db = sqlite3.connect("./data/app.db")
